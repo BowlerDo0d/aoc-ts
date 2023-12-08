@@ -31,6 +31,7 @@ const createFromTemplate = async () => {
     console.log(`Downloading input...`);
     let input = await downloadInputForYearAndDay(day, year);
     writeFileSync(`${path}/input.txt`, input as string);
+    writeFileSync(`${path}/input-test.txt`, '');
   }
   let readme = await getPuzzleDescription(year, day);
   writeFileSync(`${path}/README.md`, readme as string);
